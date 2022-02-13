@@ -2,7 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data/>
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.signupapplication.SignUpViewModel" />
+    </data>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -38,27 +44,6 @@
                 android:text="@string/sub_header_text"
                 android:textSize="@dimen/subheader_text_size" />
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/sub_header_text"
-                app:shapeAppearance="@style/Rounded"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                app:errorEnabled="true"
-                android:layout_marginTop="@dimen/header_padding"
-                android:layout_marginStart="@dimen/generic_padding"
-                android:layout_marginEnd="@dimen/generic_padding"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/first_name"
-                    android:inputType="text" />
-            </com.google.android.material.textfield.TextInputLayout>
-
             <com.google.android.material.textfield.TextInputLayout
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,6 +61,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/first_name_text"
                     android:hint="@string/first_name"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -97,6 +83,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/email_address_text"
                     android:hint="@string/email_address"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -139,6 +126,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/website_text"
                     android:hint="@string/website"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -148,6 +136,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/generic_padding"
                 android:layout_marginEnd="@dimen/generic_padding"
+                android:id="@+id/submit_btn"
                 android:text="@string/submit"
                 android:textColor="@color/white"
                 android:backgroundTint="#EF5B29"
