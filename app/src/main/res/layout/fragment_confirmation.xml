@@ -1,91 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <data/>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/name_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_padding"
-            android:layout_marginTop="@dimen/header_padding"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Hello, Audrey!"
-            android:typeface="serif"
-            android:textStyle="bold"
-            android:textSize="@dimen/header_size"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/sub_header_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:typeface="serif"
-            android:layout_marginStart="@dimen/default_padding"
-            android:layout_marginTop="@dimen/header_padding"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_title"
-            android:text="@string/confirmation_subheader_text"
-            android:textSize="@dimen/subheader_text_size"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/website_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_padding"
-            android:layout_marginTop="@dimen/header_padding"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:autoLink="web"
-            app:layout_constraintTop_toBottomOf="@+id/sub_header_text"
-            tools:text="amccoy8831.com"
-            android:textSize="@dimen/subheader_text_size"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/name_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:typeface="serif"
-            android:layout_marginStart="@dimen/default_padding"
-            android:layout_marginTop="@dimen/header_padding"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/website_id"
-            tools:text="Audrey"
-            android:textSize="@dimen/subheader_text_size"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/email_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:typeface="serif"
-            android:layout_marginStart="@dimen/default_padding"
-            android:layout_marginTop="@dimen/header_padding"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_id"
-            tools:text="ammcoy9831@hotmail.com"
-            android:textSize="@dimen/subheader_text_size"/>
-
-        <androidx.appcompat.widget.AppCompatButton
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/generic_padding"
-            android:layout_marginEnd="@dimen/generic_padding"
-            android:text="@string/signin"
-            android:textColor="@color/white"
-            android:backgroundTint="#EF5B29"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_id"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/header_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/name_header"
+                tools:text="Hello, Audrey!"
+                android:typeface="serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/header_size" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sub_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="serif"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/header_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_title"
+                android:text="@string/confirmation_subheader_text"
+                android:textSize="@dimen/subheader_text_size" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/website_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/header_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:autoLink="web"
+                app:layout_constraintTop_toBottomOf="@+id/sub_header_text"
+                tools:text="amccoy8831.com"
+                android:textSize="@dimen/subheader_text_size" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="serif"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/header_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/website_id"
+                tools:text="Audrey"
+                android:textSize="@dimen/subheader_text_size" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/email_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="serif"
+                android:layout_marginStart="@dimen/default_padding"
+                android:layout_marginTop="@dimen/header_padding"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_id"
+                tools:text="ammcoy9831@hotmail.com"
+                android:textSize="@dimen/subheader_text_size" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/generic_padding"
+                android:layout_marginEnd="@dimen/generic_padding"
+                android:text="@string/signin"
+                android:textColor="@color/white"
+                android:backgroundTint="#EF5B29"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_id"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
