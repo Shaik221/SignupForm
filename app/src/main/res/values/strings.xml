@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SignupApplication</string>
+    <string name="profile_creation">Profile Creation</string>
+    <string name="sub_header_text">Use the form below to submit your portfolio.\nAn email and password are required.</string>
+    <string name="first_name">First Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="website">Website</string>
+    <string name="submit">Submit</string>
+    <string name="signin">Sign In</string>
+    <string name="confirmation_subheader_text">Your super-awesome portfolio has been successfully
+    submitted! The details below will be public within your community!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
