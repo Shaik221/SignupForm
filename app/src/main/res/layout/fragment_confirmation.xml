@@ -12,6 +12,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -84,19 +86,22 @@
                 tools:text="ammcoy9831@hotmail.com"
                 android:textSize="@dimen/subheader_text_size" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/sign_btn"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/generic_padding"
                 android:layout_marginEnd="@dimen/generic_padding"
-                android:text="@string/signin"
-                android:textColor="@color/white"
                 android:backgroundTint="#EF5B29"
+                android:text="@string/signin"
+                android:padding="@dimen/default_padding"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email_id"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintVertical_bias="0.87" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
