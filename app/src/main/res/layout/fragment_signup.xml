@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.signupapplication.SignUpSharedViewModel" />
+            type="com.example.signupapplication.viewmodel.SignUpSharedViewModel" />
     </data>
 
 
@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_padding"
-                android:layout_marginTop="@dimen/header_padding"
+                android:layout_marginTop="@dimen/header_large_padding"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="@string/profile_creation"
@@ -51,7 +51,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/sub_header_text"
                 app:shapeAppearance="@style/Rounded"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-                app:errorEnabled="true"
                 android:layout_marginTop="@dimen/header_padding"
                 android:layout_marginStart="@dimen/generic_padding"
                 android:layout_marginEnd="@dimen/generic_padding"

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.signupapplication.SignUpSharedViewModel" />
+            type="com.example.signupapplication.viewmodel.SignUpSharedViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_padding"
-                android:layout_marginTop="@dimen/header_padding"
+                android:layout_marginTop="@dimen/header_large_padding"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="@string/name_header"

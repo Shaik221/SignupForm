@@ -1,4 +1,4 @@
-package com.example.signupapplication
+package com.example.signupapplication.ui
 
 import android.os.Bundle
 import android.text.Editable
@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.example.signupapplication.R
 import com.example.signupapplication.databinding.FragmentSignupBinding
 import com.example.signupapplication.model.User
 import com.example.signupapplication.util.RegexValidation
+import com.example.signupapplication.viewmodel.SignUpSharedViewModel
 
 class SignUpFragment : Fragment() {
     private lateinit var binding: FragmentSignupBinding
