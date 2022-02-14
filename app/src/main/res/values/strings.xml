@@ -11,6 +11,8 @@
     <string name="name_header">Hello, %1$s</string>
     <string name="confirmation_subheader_text">Your super-awesome portfolio has been successfully
     submitted! The details below will be public within your community!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password_required">Password is Required!</string>
+    <string name="please_enter_valid_email">Valid Email Address Required!</string>
+    <string name="email_required">Email is Required!</string>
+
 </resources>
