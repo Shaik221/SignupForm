@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data/>
+    <data>
+        <variable
+            name="vm"
+            type="com.example.signupapplication.SignUpSharedViewModel" />
+    </data>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -63,6 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/website_id"
+                android:visibility="@{vm.isVisible()}"
                 tools:text="Audrey"
                 android:textSize="@dimen/subheader_text_size" />
 
@@ -80,6 +85,7 @@
                 android:textSize="@dimen/subheader_text_size" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/generic_padding"
