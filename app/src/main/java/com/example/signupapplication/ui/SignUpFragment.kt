@@ -67,7 +67,8 @@ class SignUpFragment : Fragment() {
     }
 
     private fun validatePassword(): Boolean {
-        if (binding.passwordText.text.toString().trim().isEmpty()) {
+        val password = binding.passwordText.text.toString()
+        if (sharedViewModel.isRequired(password)) {
             binding.passwordId.error = resources.getString(R.string.password_required)
             binding.passwordText.requestFocus()
             return false
@@ -80,17 +81,20 @@ class SignUpFragment : Fragment() {
 
     private fun validateEmail(): Boolean {
         val email = binding.emailAddressText.text.toString()
-        if (email.trim().isEmpty()) {
-            binding.emailId.error = resources.getString(R.string.email_required)
-            binding.emailAddressText.requestFocus()
-            return false
-        } else if(email.isNotEmpty() &&
-                !email.matches(RegexValidation().emailPattern)) {
-            binding.emailId.error = resources.getString(R.string.please_enter_valid_email)
-            binding.emailAddressText.requestFocus()
-            return false
-        } else {
-            binding.emailId.isErrorEnabled = false
+        when {
+            sharedViewModel.isRequired(email) -> {
+                binding.emailId.error = resources.getString(R.string.email_required)
+                binding.emailAddressText.requestFocus()
+                return false
+            }
+            sharedViewModel.isRegexMatch(email) -> {
+                binding.emailId.error = resources.getString(R.string.please_enter_valid_email)
+                binding.emailAddressText.requestFocus()
+                return false
+            }
+            else -> {
+                binding.emailId.isErrorEnabled = false
+            }
         }
         return true
     }

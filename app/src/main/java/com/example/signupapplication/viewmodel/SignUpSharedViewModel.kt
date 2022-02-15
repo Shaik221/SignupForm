@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.signupapplication.model.User
+import com.example.signupapplication.util.RegexValidation
 
 class SignUpSharedViewModel: ViewModel() {
 
@@ -31,4 +32,8 @@ class SignUpSharedViewModel: ViewModel() {
         }
     }
 
+    fun isRegexMatch(input: String) =
+        (input.isNotEmpty() && !input.matches(RegexValidation().emailPattern))
+
+    fun isRequired(input: String) = (input.trim().isEmpty())
 }
