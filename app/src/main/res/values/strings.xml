@@ -8,7 +8,7 @@
     <string name="website">Website</string>
     <string name="submit">Submit</string>
     <string name="signin">Sign In</string>
-    <string name="name_header">Hello, %1$s</string>
+    <string name="name_header">Hello, %1$s!</string>
     <string name="confirmation_subheader_text">Your super-awesome portfolio has been successfully
     submitted! The details below will be public within your community!</string>
     <string name="password_required">Password is Required!</string>
