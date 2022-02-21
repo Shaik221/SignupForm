@@ -19,6 +19,11 @@ Sample Signup Form with few input fields like FirstName, email, password and web
 # NOTE
 - As in the input form required fields are only** email and password** so even though other fields empty we will allow the user to navigate to the confirmation page and see the details entered i.e. only email all other fields are invisible.
 
+# Future enhancements 
+- Jetpack compose implementation
+- UML digram for the app architecture 
+- Coroutines
+
 # Sample Screenshots
 
 # Signup form
